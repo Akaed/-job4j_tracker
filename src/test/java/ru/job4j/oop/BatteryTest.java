@@ -31,4 +31,5 @@ public class BatteryTest {
         int expected = 95;
         assertThat(another.getLoad()).isEqualTo(expected);
     }
+
 }
