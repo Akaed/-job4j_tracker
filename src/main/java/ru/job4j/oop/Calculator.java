@@ -19,8 +19,8 @@ public class Calculator {
         return x + z;
     }
 
-    public int sumAllOperation() {
-        return  minus(5) + sum(5) + devide(5) + multiply(6);
+    public int sumAllOperation(int z) {
+        return minus(z) + sum(z) + devide(z) + multiply(z);
     }
 
     public static void main(String[] args) {
@@ -29,6 +29,6 @@ public class Calculator {
         System.out.println(calculator.multiply(6));
         System.out.println(minus(5));
         System.out.println(sum(5));
-        System.out.println(calculator.sumAllOperation());
+        System.out.println(calculator.sumAllOperation(5));
     }
 }
