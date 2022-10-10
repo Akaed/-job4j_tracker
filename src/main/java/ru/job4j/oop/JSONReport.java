@@ -10,4 +10,5 @@ public class JSONReport extends TextReport {
                 + "\t\"body\" : " + ln2 + body + ln2 + ln
                 + "}";
     }
+
 }
