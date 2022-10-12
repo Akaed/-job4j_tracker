@@ -4,14 +4,16 @@ import java.time.LocalDateTime;
 
 public class Item {
     private int id;
+
     private String name;
+
     private LocalDateTime created = LocalDateTime.now();
 
     public Item() {
     }
 
     public Item(String name) {
-          this.name = name;
+        this.name = name;
     }
 
     public Item(int id, String name) {
@@ -27,11 +29,15 @@ public class Item {
         this.id = id;
     }
 
-    public LocalDateTime getName() {
-        return created;
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LocalDateTime getCreated() {
+        return created;
     }
 }
