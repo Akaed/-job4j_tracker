@@ -5,4 +5,5 @@ public class College {
        Student student = new Freshman();
        Object obj = new Freshman();
     }
+
 }
