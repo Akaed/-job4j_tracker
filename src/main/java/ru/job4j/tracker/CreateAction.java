@@ -6,6 +6,7 @@ public class CreateAction implements UserAction {
     public CreateAction(Output out) {
         this.out = out;
     }
+
     @Override
     public String name() {
         return "Add new Item";
@@ -21,4 +22,5 @@ public class CreateAction implements UserAction {
 
         return true;
     }
+
 }
