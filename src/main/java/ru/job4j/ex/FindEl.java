@@ -6,8 +6,11 @@ public class FindEl {
             throw new ElementNotFoundException("Url could not be null");
         }
         int rsl = -1;
-        for (int index = 0; key != value[index]; index++) {
-            rsl = index;
+        for (int index = 0; index < value.length; index++) {
+            if (value[index].equals(key)) {
+                rsl = index;
+                break;
+            }
         }
         return rsl;
     }
