@@ -4,17 +4,20 @@ import java.util.Arrays;
 
 public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
-        if (!(Arrays.asList(users).contains(login))) {
-            throw new UserNotFoundException("User cold not found");
+        for (User user : users) {
+            if (user.getUsername().equals(login)) {
+                return user;
+            }
         }
-        return null;
+        throw new UserNotFoundException("User cold not found");
+
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (!(user.isValid()) || user.getUsername().length() < 3) {
+        if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("User invalid");
         }
-        return false;
+        return true;
     }
 
     public static void main(String[] args) {
