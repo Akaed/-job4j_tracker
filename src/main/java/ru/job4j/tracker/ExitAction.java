@@ -14,7 +14,7 @@ public class ExitAction implements UserAction {
     }
 
     public boolean execute(Input input, Tracker tracker) {
-        out.println("=== Exit Program ===");
+    //   out.println("=== Exit Program ===");
         return false;
     }
 

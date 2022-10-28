@@ -25,6 +25,7 @@ public class StartUITest {
         );
     }
 
+
     @Test
     public void whenReplaceItem() {
         Output out = new StubOutput();
@@ -133,4 +134,5 @@ public class StartUITest {
                         + "=== Exit Program ===" + ln
         );
     }
+
 }
