@@ -25,7 +25,6 @@ public class StartUITest {
         );
     }
 
-
     @Test
     public void whenReplaceItem() {
         Output out = new StubOutput();
