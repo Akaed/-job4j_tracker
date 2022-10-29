@@ -50,8 +50,8 @@ public class PasswordValidator {
             throw new IllegalArgumentException("Password should contain at least one special symbol");
         }
         String[] specsymbol = new String[] {"qwerty", "12345", "password", "admin", "user"};
-        for (int index = 0; index < specsymbol.length; index++) {
-            if (password.toLowerCase().contains(specsymbol[index])) {
+        for (String space: specsymbol) {
+            if (password.toLowerCase().contains(space)) {
                 throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
             }
         }
