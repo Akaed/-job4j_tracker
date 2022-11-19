@@ -8,18 +8,13 @@ public class ConvertList2Array {
         int groups = (int) Math.ceil((double) list.size() / cells);
         int[][] array = new int[groups][cells];
         int row = 0, cell = 0;
-        int count = 0;
         for (Integer num : list) {
             array[row][cell] = num;
-            if (cell == cells - 1) {
+            cell++;
+            if (cell == cells) {
                row++;
                cell = 0;
-               count++;
             }
-            if (cell != cells && count != 1) {
-                cell++;
-            }
-            count = 0;
         }
         return array;
     }
