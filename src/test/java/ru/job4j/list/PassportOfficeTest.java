@@ -20,4 +20,5 @@ public class PassportOfficeTest {
         assertThat(office.add(citizen)).isTrue();
         assertThat(office.add(citizen2)).isFalse();
     }
+
 }
