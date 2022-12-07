@@ -24,4 +24,5 @@ public class ItemDescByNameTest {
         );
         assertThat(jobs).isEqualTo(expected);
     }
+
 }
