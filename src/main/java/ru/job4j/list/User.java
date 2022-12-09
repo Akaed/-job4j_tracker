@@ -22,11 +22,24 @@ public class User implements Comparable<User> {
 
     @Override
     public int compareTo(User o) {
-        int k = 0;
+        int k;
         if (name.equals(o.getName())) {
+            k = Integer.compare(age, o.getAge());
+        } else {
             k = Integer.compare(age, o.getAge());
         }
             return k;
+    }
+
+    @Override
+    public String toString() {
+        return "User{"
+                +
+                "name='" + name + '\''
+                +
+                ", age=" + age
+                +
+                '}';
     }
 
     @Override
