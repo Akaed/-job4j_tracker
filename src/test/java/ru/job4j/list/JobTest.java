@@ -81,7 +81,7 @@ public class JobTest {
                 new Job("Fix bug", 2),
                 new Job("X task", 0)
         );
-        Collections.sort(jobs, new JobIncreaseByName().thenComparing(new JobWaningByPriority()));
+        jobs.sort(new JobIncreaseByName().thenComparing(new JobWaningByPriority()));
         List<Job> expected = Arrays.asList(
                 new Job("X task", 0),
                 new Job("Fix bug", 4),
@@ -100,7 +100,7 @@ public class JobTest {
                 new Job("X task", 5),
                 new Job("X task", 0)
         );
-        Collections.sort(jobs, new JobWaningByPriority().thenComparing(new JobIncreaseByName()));
+        jobs.sort(new JobWaningByPriority().thenComparing(new JobIncreaseByName()));
         List<Job> expected = Arrays.asList(
                 new Job("X task", 5),
                 new Job("Fix bug", 4),
@@ -110,4 +110,5 @@ public class JobTest {
         );
         assertThat(jobs).isEqualTo(expected);
     }
+
 }

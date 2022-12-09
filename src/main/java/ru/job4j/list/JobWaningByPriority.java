@@ -7,4 +7,5 @@ public class JobWaningByPriority implements Comparator<Job> {
     public int compare(Job o1, Job o2) {
         return o2.getPriority() - o1.getPriority();
     }
+
 }

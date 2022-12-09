@@ -7,4 +7,5 @@ public class JobWaningByName implements Comparator<Job> {
     public int compare(Job o1, Job o2) {
         return o2.getName().length() - o1.getName().length();
     }
+
 }
