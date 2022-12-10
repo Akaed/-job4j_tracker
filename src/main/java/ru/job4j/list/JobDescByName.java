@@ -2,9 +2,10 @@ package ru.job4j.list;
 
 import java.util.Comparator;
 
-public class JobIncreaseByName implements Comparator<Job> {
+public class JobDescByName implements Comparator<Job> {
     @Override
     public int compare(Job o1, Job o2) {
-        return o2.getName().compareTo(o1.getName());
+        return o1.getName().compareTo(o2.getName());
     }
+
 }

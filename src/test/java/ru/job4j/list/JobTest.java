@@ -3,7 +3,6 @@ package ru.job4j.list;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -42,13 +41,13 @@ public class JobTest {
     }
 
     @Test
-    public void whenWaningByName() {
+    public void whenDescByName() {
         List<Job> jobs = Arrays.asList(
                 new Job("Fix bug", 1),
                 new Job("X task", 0),
                 new Job("Fix bug", 2)
         );
-        jobs.sort(new JobWaningByName());
+        jobs.sort(new JobDescByName());
         List<Job> expected = Arrays.asList(
                 new Job("Fix bug", 1),
                 new Job("Fix bug", 2),
@@ -58,13 +57,13 @@ public class JobTest {
     }
 
     @Test
-    public void whenWaningByPriority() {
+    public void whenDescByPriority() {
         List<Job> jobs = Arrays.asList(
                 new Job("Fix bug", 1),
                 new Job("X task", 0),
                 new Job("Fix bug", 2)
         );
-        jobs.sort(new JobWaningByPriority());
+        jobs.sort(new JobDescByPriority());
         List<Job> expected = Arrays.asList(
                 new Job("Fix bug", 2),
                 new Job("Fix bug", 1),
@@ -74,14 +73,14 @@ public class JobTest {
     }
 
     @Test
-    public void whenComparingIncreaseByNameAndWaningByPriority() {
+    public void whenComparingIncreaseByNameAndDescByPriority() {
         List<Job> jobs = Arrays.asList(
                 new Job("Fix bug", 1),
                 new Job("Fix bug", 4),
                 new Job("Fix bug", 2),
                 new Job("X task", 0)
         );
-        jobs.sort(new JobIncreaseByName().thenComparing(new JobWaningByPriority()));
+        jobs.sort(new JobIncreaseByName().thenComparing(new JobDescByPriority()));
         List<Job> expected = Arrays.asList(
                 new Job("X task", 0),
                 new Job("Fix bug", 4),
@@ -92,7 +91,7 @@ public class JobTest {
     }
 
     @Test
-    public void whenComparingWaningByPriorityAndIncreaseByName() {
+    public void whenComparingDescByPriorityAndIncreaseByName() {
         List<Job> jobs = Arrays.asList(
                 new Job("Fix bug", 1),
                 new Job("Fix bug", 4),
@@ -100,7 +99,7 @@ public class JobTest {
                 new Job("X task", 5),
                 new Job("X task", 0)
         );
-        jobs.sort(new JobWaningByPriority().thenComparing(new JobIncreaseByName()));
+        jobs.sort(new JobDescByPriority().thenComparing(new JobIncreaseByName()));
         List<Job> expected = Arrays.asList(
                 new Job("X task", 5),
                 new Job("Fix bug", 4),
