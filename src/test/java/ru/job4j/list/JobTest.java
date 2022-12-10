@@ -109,5 +109,4 @@ public class JobTest {
         );
         assertThat(jobs).isEqualTo(expected);
     }
-
 }
