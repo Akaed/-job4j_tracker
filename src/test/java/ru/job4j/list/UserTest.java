@@ -59,5 +59,4 @@ public class UserTest {
                 );
         assertThat(rsl).isLessThan(0);
     }
-
 }
