@@ -21,4 +21,5 @@ public class LexSortTest {
         Arrays.sort(input, new LexSort());
         assertThat(input).containsExactly(out);
     }
+
 }

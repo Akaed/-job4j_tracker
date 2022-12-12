@@ -11,4 +11,5 @@ public class LexSort  implements Comparator<String> {
         String[] words2 = right.split("\\.");
         return Integer.compare(Integer.parseInt(words[0]), Integer.parseInt(words2[0]));
     }
+
 }
