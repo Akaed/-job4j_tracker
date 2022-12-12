@@ -47,5 +47,4 @@ public class Job {
     public int hashCode() {
         return Objects.hash(name, priority);
     }
-
 }
