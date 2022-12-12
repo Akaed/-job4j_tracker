@@ -53,4 +53,5 @@ public class StringCompareTest {
         );
         assertThat(rst).isLessThan(0);
     }
+
 }
