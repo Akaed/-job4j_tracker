@@ -75,30 +75,21 @@ public class JobTest {
 
     @Test
     public void whenComparingDescByPriorityAndIncreaseByName() {
-        List<Job> jobs = Arrays.asList(
+        Comparator<Job> cmpNamePriority = new JobDescByPriority().thenComparing(new JobIncreaseByName());
+        int rsl = cmpNamePriority.compare(
                 new Job("Fix bug", 1),
-                new Job("Fix bug", 4),
-                new Job("Fix bug", 2),
-                new Job("X task", 5),
-                new Job("X task", 0)
+                new Job("Impl task", 1)
         );
-        jobs.sort(new JobDescByPriority().thenComparing(new JobIncreaseByName()));
-        List<Job> expected = Arrays.asList(
-                new Job("X task", 5),
-                new Job("Fix bug", 4),
-                new Job("Fix bug", 2),
-                new Job("Fix bug", 1),
-                new Job("X task", 0)
-        );
-        assertThat(jobs).isEqualTo(expected);
+
+        assertThat(rsl).isLessThan(0);
     }
 
     @Test
-    public void whenCompatorByNameAndPrority() {
+    public void whenComparatorByNameAndPriority() {
         Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobDescByPriority());
         int rsl = cmpNamePriority.compare(
-                new Job("Impl task", 0),
-                new Job("Fix bug", 1)
+                new Job("Impl task", 1),
+                new Job("Impl task", 0)
         );
         assertThat(rsl).isLessThan(0);
     }
