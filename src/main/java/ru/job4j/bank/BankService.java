@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * Реализация методов проекта банковский аккаунт
- * @author STAS KOROBEYNIKOV
+ * @author Akaed
  *  @version 1.0
  */
 public class BankService {
