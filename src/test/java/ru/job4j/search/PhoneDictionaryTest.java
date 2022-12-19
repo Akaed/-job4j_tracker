@@ -26,5 +26,4 @@ public class PhoneDictionaryTest {
         ArrayList<Person> persons = phones.find("00");
         assertThat(persons.size()).isEqualTo(0);
     }
-
 }
