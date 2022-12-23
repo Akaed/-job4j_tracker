@@ -3,7 +3,7 @@ package ru.job4j.stream;
 import java.util.Objects;
 
 public class Address {
-    private String city;
+    private  String city;
 
     private String street;
 
@@ -16,6 +16,13 @@ public class Address {
         this.street = street;
         this.home = home;
         this.apartment = apartment;
+    }
+
+    public Address() {
+    }
+
+    public  String getCity() {
+        return city;
     }
 
     @Override
@@ -37,4 +44,5 @@ public class Address {
     public int hashCode() {
         return Objects.hash(city, street, home, apartment);
     }
+
 }
