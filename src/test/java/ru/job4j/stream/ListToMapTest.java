@@ -41,5 +41,4 @@ public class ListToMapTest {
         expected.put("Sidorov", new Student(60, "Sidorov"));
         assertThat(result).containsAllEntriesOf(expected);
     }
-
 }
