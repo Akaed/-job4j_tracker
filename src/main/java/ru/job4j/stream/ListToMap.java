@@ -11,7 +11,7 @@ public class ListToMap {
                 Collectors.toMap(
                         Student::getSurname,
                         student -> student,
-                        (name, score) -> name
+                        (oldObject, newObject) -> oldObject
                 )
         );
     }
